@@ -146,7 +146,7 @@ sample_clips/               A few RAVDESS test clips for quick review
 ## Deployment
 
 Live dashboard on Streamlit Community Cloud:
-`<PASTE-LIVE-URL-HERE>`
+`https://speechemotiondetection-qwe.streamlit.app/`
 
 ## What I'd improve with more time
 
