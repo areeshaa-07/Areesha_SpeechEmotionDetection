@@ -109,7 +109,7 @@ data or by training with channel and noise augmentation.
 ## How to run the project
 
 ```bash
-git clone https://github.com/<username>/Hamza_SpeechEmotionDetection.git
+git clone https://github.com/<areeshaa-07>/Areesha_SpeechEmotionDetection.git
 cd Hamza_SpeechEmotionDetection
 
 python -m venv .venv
