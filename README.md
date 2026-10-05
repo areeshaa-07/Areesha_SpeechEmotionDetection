@@ -1,4 +1,4 @@
-# Speech Emotion Detection — Hexovate Assessment
+# Speech Emotion Detection 
 
 ## Project overview
 
