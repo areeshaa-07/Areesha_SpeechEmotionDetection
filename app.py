@@ -41,6 +41,9 @@ with tab_predict:
 
     st.markdown("**Option 2 — record from your microphone**")
     rec = st.audio_input("Record a short clip (2–4 seconds, speak clearly)")
+    st.caption("Note: live audio is recorded on a different mic and in a different "
+           "acoustic environment than the training data. Predictions on live "
+           "recordings are typically less confident than on uploaded RAVDESS clips.")
 
     # Prefer the upload if both are present
     audio_source = up if up is not None else rec
