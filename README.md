@@ -90,15 +90,13 @@ confusions are:
 A CNN trained on mel spectrograms would preserve those temporal cues and is
 the natural next step to reduce these errors.
 
-### Known limitation — domain shift
+### Known limitations
 
-The model is trained on **studio recordings of professional actors**
-(close-mic, 48 kHz, controlled environment, strongly emoted). Live
-microphone input from a laptop or phone is a very different acoustic
-environment, and predictions on live audio are noticeably less confident
-than on uploaded RAVDESS clips. This is expected and is the first thing I
-would address with more time — for example by fine-tuning on in-the-wild
-data or by training with channel and noise augmentation.
+Two distinct failure modes, with different causes and fixes:
+
+1. **Class overlap in RAVDESS itself.** Even on held-out actors, neutral clips are often read as sad and happy clips as sad, because these classes overlap in mean-MFCC space and mean-pooling discards the temporal pitch contour. Fix: a CNN on mel spectrograms, which preserves temporal structure.
+
+2. **Domain shift on live audio.** The model is trained on studio recordings of professional actors (close-mic, strongly emoted). Live mic input is a very different acoustic environment, so predictions are noticeably less confident. Fix: fine-tuning on in-the-wild data, or channel and noise augmentation.
 
 ## Installation requirements
 
